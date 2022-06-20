@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_size">18sp</dimen>
+    <dimen name="sixth">18sp</dimen>
+    <dimen name="subtitle_size">12sp</dimen>
+    <dimen name="text_content_size">14sp</dimen>
+    <dimen name="quotes_top_size">13sp</dimen>
+    <dimen name="ten">10sp</dimen>
+    <dimen name="mine_text">15sp</dimen>
+    <dimen name="rmb_size">22sp</dimen>
+    <dimen name="caifu_trans">24sp</dimen>
+    <dimen name="thrity">11sp</dimen>
+    <dimen name="nine">9sp</dimen>
+
+    <dimen name="controller_height">46dp</dimen>
+    <dimen name="controller_icon_padding">12dp</dimen>
+    <dimen name="controller_text_size">16sp</dimen>
+    <dimen name="default_spacing">10dp</dimen>
+    <dimen name="controller_seekbar_size_n">14dp</dimen>
+    <dimen name="controller_seekbar_size_s">14dp</dimen>
+    <dimen name="controller_seekbar_max_size">1dp</dimen>
+    <dimen name="player_play_btn_size">50dp</dimen>
+    <dimen name="controller_time_text_size">14sp</dimen>
+    <dimen name="player_default_spacing">10dp</dimen>
+
+
+
+
+    <dimen name="dkplayer_controller_height">46dp</dimen>
+    <dimen name="dkplayer_controller_icon_padding">12dp</dimen>
+    <dimen name="dkplayer_controller_text_size">16sp</dimen>
+    <dimen name="dkplayer_default_spacing">10dp</dimen>
+    <dimen name="dkplayer_controller_seekbar_size_n">14dp</dimen>
+    <dimen name="dkplayer_controller_seekbar_size_s">14dp</dimen>
+    <dimen name="dkplayer_controller_seekbar_max_size">1dp</dimen>
+    <dimen name="dkplayer_play_btn_size">50dp</dimen>
+    <dimen name="dkplayer_controller_time_text_size">14sp</dimen>
+
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_270dp">270dp</dimen>
+    <dimen name="_16sp">16sp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+    <dimen name="_30dp">30dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+
+
+    <dimen name="grid_expected_size">120dp</dimen>
+
+
+
+</resources>

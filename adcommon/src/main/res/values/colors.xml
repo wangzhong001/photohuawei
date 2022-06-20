@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="color_029BFA">#029BFA</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_E6E6E6">#E6E6E6</color>
+    <color name="color_A6A6A6">#A6A6A6</color>
+    <color name="color_EEEEEE">#EEEEEE</color>
+
+
+
+
+
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorGray">#878787</color>
+    <color name="colorOrange">#FFE26C25</color>
+    <color name="colorBlue">#FF036EB8</color>
+
+
+
+    <color name="black">#233034</color>
+    <color name="black_text">#4b4b4b</color>
+    <color name="input_hint">#818383</color>
+    <color name="submit">#268da3</color>
+    <color name="answer_text">#5d6263</color>
+    <color name="button_content">#7f7f7f</color>
+    <color name="color_FAAB2E">#FAAB2E</color>
+    <color name="color_000000">#000000</color>
+
+
+    <!--下一步相关颜色-->
+    <color name="next_step_bg_unable_color">#F5F5F5</color>
+    <color name="next_step_bg_able_color">#FF5134</color>
+    <color name="next_step_tv_unable_color">#808080</color>
+    <color name="next_step_tv_able_color">#FFFFFF</color>
+    <color name="color_008487">#008487</color>
+    <color name="photo_blue">#438EDB</color>
+    <color name="photo_red">#FF0000</color>
+
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<SurfaceView-->
+                <!--android:id="@+id/surfaceView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" />-->
+
+
+            <SurfaceView
+                android:id="@+id/surfaceView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="109dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_1B1B1B">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/camera_album_image"
+                    android:layout_gravity="center"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white" />
+            </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/iv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/selector_camera_take_photo" />
+
+
+
+
+            <LinearLayout
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:id="@+id/iv_xuanzhuan"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/xuanzhuan_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/camera_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_1B1B1B"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:background="?android:attr/actionBarItemBackground"
+                android:id="@+id/iv_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/back_icon_white" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_delay"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_delay"
+                    android:src="@drawable/yanchi_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_delay"
+                    android:layout_marginLeft="3dp"
+                    android:text="延迟拍摄"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/color_FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <TextView
+                android:background="?android:attr/actionBarItemBackground"
+                android:id="@+id/tv_gonglue"
+                android:layout_centerVertical="true"
+                android:padding="16dp"
+                android:text="拍摄攻略"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="14sp"
+                android:drawablePadding="6dp"
+                android:drawableLeft="@drawable/shuoming_icon"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_layout"
+            android:layout_below="@id/camera_top_layout"
+            android:src="@drawable/paishe_icon"
+            android:scaleType="center" />
+
+        <RelativeLayout
+            android:layout_above="@id/bottom_layout"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.makeramen.roundedimageview.RoundedImageView
+                app:riv_corner_radius="8dp"
+                android:src="@drawable/bg_transparent_icon"
+                android:scaleType="fitXY"
+                android:layout_width="200dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:id="@+id/camera_tips"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="靠近白墙效果更佳哦~"
+                android:textSize="14sp"
+                android:textColor="@color/color_FFFFFF" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/camera_delayed_num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="123sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

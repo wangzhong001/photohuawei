@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.smkj.zzj.view.VIPCardBehavior"
+        >
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:id="@+id/view1"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:background="#556644"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <!-- VIP卡布局 -->
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:background="#ff5555"
+                app:layout_constraintTop_toBottomOf="@+id/view1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+            <!-- VIP卡遮罩布局 -->
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:background="#55ff55"
+                android:layout_marginTop="50dp"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="600dp"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

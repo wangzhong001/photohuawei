@@ -1,0 +1,91 @@
+ext {
+    localMavenRepoUrl = new File(rootProject.rootDir, 'repo').toURI().toString()
+
+    groupId = 'com.huawei.hms'
+    artifactId = 'game'
+    artifactId_app = 'appservice'
+    artifactId_jos = 'jos'
+    version = '5.0.4.302'
+    versionCode = 50004302
+
+    buildToolsVersion = '29.0.3'
+    compileSdkVersion = 29
+    minSdkVersion = 17
+    targetSdkVersion = 28
+
+    // Android-support库
+    android_support_version = '28.0.0'
+
+    // HMS SDK base组件
+    hms_sdk_base_version = '5.0.4.301'
+
+    // HMS SDK HwID组件
+    hms_sdk_hwid_version = '5.0.3.302'
+
+    // HMS SDK IAP组件
+    hms_sdk_iap_version = '5.0.1.300'
+
+    // HMS SDK apptouch组件
+    hms_sdk_apptouch_version = '5.0.2.300'
+
+    // UPDATE SDK
+    update_sdk_dep = '2.0.7.302'
+}
+buildscript {
+    repositories {
+		maven {url 'http://developer.huawei.com/repo/'}
+		
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        maven { url "https://jitpack.io" }
+
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven {url 'https://developer.huawei.com/repo/'}
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+		classpath 'org.greenrobot:greendao-gradle-plugin:3.2.0'
+        classpath 'com.novoda:bintray-release:0.3.4'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.6'
+        classpath 'com.huawei.agconnect:agcp:1.4.2.300'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+		maven {url 'http://developer.huawei.com/repo/'}
+	
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/jcenter" }
+        maven { url "https://jitpack.io" }
+
+        maven { url "http://mvn.leancloud.cn/nexus/content/repositories/public"}
+
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven {url 'https://developer.huawei.com/repo/'}
+        jcenter()
+//        google()
+        flatDir {
+            dirs project(':adcommon').file('libs')
+        }
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+allprojects {
+    tasks.withType(Javadoc) {
+        options{
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+    }
+}

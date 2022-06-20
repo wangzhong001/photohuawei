@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_4D61F1"
+        tools:context="com.qihe.zzj.ui.activity.PhotoAllActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:contentInsetStart="0dp">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/function_string_all"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sixth"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:background="?android:attr/actionBarItemBackground"
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="14dp"
+                android:src="@drawable/back_icon_white" />
+        </android.support.v7.widget.Toolbar>
+
+<!--        <com.androidkun.xtablayout.XTabLayout-->
+<!--            android:id="@+id/tablayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/tool_bar"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            app:xTabIndicatorColor="@color/color_FFFFFF"-->
+<!--            app:xTabIndicatorHeight="4dp"-->
+<!--            app:xTabIndicatorWidth="16dp"-->
+<!--            app:xTabMinWidth="100dp"-->
+<!--            app:xTabMode="scrollable"-->
+<!--            app:xTabSelectedTextSize="20sp"-->
+<!--            app:xTabTextColor="@color/color_FFFFFF"-->
+<!--            app:xTabTextSelectedBold="true"-->
+<!--            app:xTabTextSize="14sp" />-->
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tool_bar"
+            android:layout_marginBottom="5dp"
+            android:background="@color/color_4D61F1"
+            app:tabTextAppearance="@style/tabLayout_style"
+            app:tabMode="scrollable"
+            app:tabBackground="@drawable/tab_selector"
+            app:tabRippleColor="@android:color/transparent"
+            app:tabGravity="fill"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="#fff"
+            app:tabTextColor="#cfcfcf" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:background="@drawable/shape_photo_all_viewpager_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tablayout" />
+    </RelativeLayout>
+</layout>

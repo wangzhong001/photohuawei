@@ -1,0 +1,232 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // 应用插件
+apply plugin: 'com.huawei.agconnect'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword '12345678'
+            storeFile file('D:/key/wz证件照.jks')
+            storePassword '12345678'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.qihe.zzj"
+        minSdkVersion 19
+        targetSdkVersion 28
+        multiDexEnabled true
+        versionCode 10
+        versionName "1.0.9"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        ndk {
+//            //目前已支持 "armeabi-v7a","arm64-v8a","x86","x86_64" 平台架构
+//            abiFilters "armeabi-v7a"
+//        }
+
+//        packagingOptions {
+//            exclude "lib/arm64/libimagepipeline.so"
+//        }
+
+        ndk{
+            abiFilters "armeabi-v7a"
+        }
+//        packagingOptions {
+//            exclude "lib/arm64-v8a/libimagepipeline.so"
+//        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        debug {
+//            minifyEnabled true // 混淆
+            signingConfig signingConfigs.config
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true//混淆开启
+            zipAlignEnabled true    //zip优化
+            shrinkResources true    //移除无用
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 加载默认混淆配置文件
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir(['libs'])
+        }
+    }
+    greendao {
+        // 指定数据库schema版本号，迁移等操作会用到
+        schemaVersion 1
+        // 设置生成数据库文件的目录，默认是在build中，可以将生成的文件放到我们的java目录中
+        targetGenDir 'src/main/java'
+        // 设置生成的数据库相关文件的包名，默认为entity所在的包名
+        daoPackage 'com.smkj.zzj.gen'
+    }
+    /** 引用腾讯广告的aar文件,此段代码必须这样**/
+    repositories {
+        flatDir {
+            dirs 'libs', '../adcommon/src/tencent/libs'
+            dirs 'libs', '../adcommon/src/chuanshanjia/libs'
+        }
+    }
+    productFlavors {
+        xiaomi { //小米
+            buildConfigField "boolean", "IS_SHOW_BANNER_AD", "true" //是否显示横幅广告
+            buildConfigField "boolean", "IS_SHOW_SPLASH_AD", "true" //是否显示开屏广告
+            buildConfigField "boolean", "IS_SHOW_NATIVE_AD", "true" //是否显示原生广告
+            buildConfigField "boolean", "IS_SHOW_VERTICALINTERSTITIAL_AD", "true" //是否显示插屏广告
+            buildConfigField "boolean", "XIAOMI_STIMULATE_ID", "true" //是否显示激励视频广告
+        }
+        chuanshanjia { //穿山甲
+            buildConfigField "boolean", "IS_SHOW_BANNER_AD", "true" //是否显示横幅广告
+            buildConfigField "boolean", "IS_SHOW_SPLASH_AD", "true" //是否显示开屏广告
+            buildConfigField "boolean", "IS_SHOW_NATIVE_AD", "true" //是否显示原生广告
+            buildConfigField "boolean", "IS_SHOW_VERTICALINTERSTITIAL_AD", "true" //是否显示插屏广告
+            buildConfigField "boolean", "IS_SHOW_STIMULATE_AD", "true" //是否显示激励视频广告
+            buildConfigField "boolean", "IS_NEED_COMFIRMED", "false" //是否提示下载
+        }
+        tencent { //腾讯
+            buildConfigField "boolean", "IS_SHOW_BANNER_AD", "false" //是否显示横幅广告
+            buildConfigField "boolean", "IS_SHOW_SPLASH_AD", "true" //是否显示开屏广告
+            buildConfigField "boolean", "IS_SHOW_NATIVE_AD", "false" //是否显示原生广告
+            buildConfigField "boolean", "IS_SHOW_VERTICALINTERSTITIAL_AD", "true" //是否显示插屏广告
+            buildConfigField "boolean", "IS_SHOW_STIMULATE_AD", "true" //是否显示激励视频广告
+        }
+        noad { //无广告
+            buildConfigField "boolean", "IS_SHOW_BANNER_AD", "false" //是否显示横幅广告
+            buildConfigField "boolean", "IS_SHOW_SPLASH_AD", "false" //是否显示开屏广告
+            buildConfigField "boolean", "IS_SHOW_NATIVE_AD", "false" //是否显示原生广告
+            buildConfigField "boolean", "IS_SHOW_VERTICALINTERSTITIAL_AD", "false" //是否显示插屏广告
+            buildConfigField "boolean", "IS_SHOW_STIMULATE_AD", "false" //是否显示激励视频广告
+        }
+        productFlavors.all {
+            flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+    repositories {
+        maven {
+            url 'https://repo.spring.io/libs-snapshot'
+        }
+        maven { url "https://maven.google.com" }
+        maven { url "https://dl.google.com/dl/android/maven2/" }
+    }
+
+    // dataBinding 加入
+    dataBinding {
+        enabled = true
+    }
+
+    //增量编译
+    dexOptions {
+//        incremental true
+        preDexLibraries = true
+        javaMaxHeapSize"4g"
+    }
+
+    //对PNG格式检测，发布时需开启
+    aaptOptions {
+        cruncherEnabled true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+configurations {
+    //小米平台编译
+    xiaomiDebugCompile //Debug模式
+    xiaomiReleaseCompile //Release模式
+    //腾讯平台编译
+    tencentDebugCompile //Debug模式
+    tencentReleaseCompile //Release模式
+    //无广告平台编译
+    noadDebugCompile //Debug模式
+    noadReleaseCompile //Release模式
+
+    //穿山甲平台编译
+    chuanshanjiaDebugCompile //Debug模式
+    chuanshanjiaReleaseCompile //Release模式
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:28.0.0'
+    compile 'com.android.support:support-v4:28.0.0'
+    compile 'com.leo618:SplashAuth:0.0.1'
+    compile 'com.android.support:design:28.0.0'
+//    compile 'com.androidkun:XTabLayout:1.1.3'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    compile 'com.blankj:utilcode:1.29.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    // 基础依赖包，必须要依赖
+    compile 'com.gyf.immersionbar:immersionbar:3.0.0'
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    //轮播图
+    compile 'com.youth.banner:banner:1.4.10'
+    compile 'com.facebook.fresco:fresco:0.14.1'
+    compile 'com.zhihu.android:matisse:0.5.2-beta3'
+    //小米平台关联编译
+    compile 'com.android.support.constraint:constraint-layout:1.1.3'
+    xiaomiDebugCompile project(path: ':adcommon', configuration: 'xiaomiDebug')
+    xiaomiReleaseCompile project(path: ':adcommon', configuration: 'xiaomiRelease')
+    //腾讯平台编译
+    tencentDebugCompile project(path: ':adcommon', configuration: 'tencentDebug')
+    tencentReleaseCompile project(path: ':adcommon', configuration: 'tencentRelease')
+    //无广告平台编译
+    noadDebugCompile project(path: ':adcommon', configuration: 'noadDebug')
+    noadReleaseCompile project(path: ':adcommon', configuration: 'noadRelease')
+    //穿山甲平台编译
+    chuanshanjiaDebugCompile project(path: ':adcommon', configuration: 'chuanshanjiaDebug')
+    chuanshanjiaReleaseCompile project(path: ':adcommon', configuration: 'chuanshanjiaRelease')
+    compile project(':adcommon')
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'org.greenrobot:greendao-generator:3.2.0'
+    // 数据库
+    compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0'
+    compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0'
+    compile 'com.github.nanchen2251:CompressHelper:1.0.5'
+    compile files('libs/mta-android-sdk-3.1.4.jar')
+    compile files('libs/mid-sdk-3.73.jar')
+    //背景分离
+    compile 'com.huawei.hms:ml-computer-vision-segmentation:1.0.4.301'
+    compile 'com.huawei.hms:ml-computer-vision-image-segmentation-body-model:1.0.4.301'
+    //人脸识别
+    compile 'com.huawei.hms:ml-computer-vision-face:1.0.4.300'
+    compile 'com.huawei.hms:ml-computer-vision-face-shape-point-model:1.0.4.300'
+    compile files('libs/IVClip_V1.0.jar')
+    //分享
+    compile 'gdut.bsx:share2:0.9.3'
+    //友盟统计
+//    compile "com.umeng.umsdk:common:9.1.0" //（必选）
+//    compile "com.umeng.umsdk:asms:1.1.3" // asms包依赖(必选)
+//    compile "com.umeng.umsdk:crash:0.0.4" // native crash包依赖(必选)
+
+    compile files('libs/umeng-common-9.4.0.jar') // 统计SDK
+    compile (name:'umeng-asms-armeabi-v1.2.3', ext:'aar')// 重要组件，如不集成会在初始化时输出e级别的LOG提示和Toast提示
+    compile (name:'umeng-abtest-v1.0.0', ext:'aar')//U-App中ABTest模块依赖组件
+    compile (name:'umeng-apm-armeabi-v1.3.1', ext:'aar')// 错误捕获依赖组件，如果需要错误捕获能力，请下载集成应用性能SDK
+
+    compile 'com.huawei.hms:appservice:' + rootProject.ext.version
+
+    compile 'com.android.support:support-annotations:' + rootProject.ext.android_support_version
+    compile 'com.android.support:support-fragment:' + rootProject.ext.android_support_version
+
+    compile 'com.huawei.hms:base:' + rootProject.ext.hms_sdk_base_version
+    compile 'com.huawei.hms:hwid:' + rootProject.ext.hms_sdk_hwid_version
+    compile 'com.huawei.hms:iap:' + rootProject.ext.hms_sdk_iap_version
+
+    //fastjson
+    compile 'com.alibaba:fastjson:1.1.62.android'
+}

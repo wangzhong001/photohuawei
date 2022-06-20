@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="baseViewModel"
+            type="com.qihe.zzj.view.PicItemViewModel"/>
+
+        <import type="android.view.View"/>
+
+        <import type="com.qihe.zzj.util.TimeUtil"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        binding:onClickCommand="@{baseViewModel.itemClick}"
+        android:background="@drawable/selector_my_recycler">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:text="@{baseViewModel.idPhotoBean.name+@string/dianzizhao}"
+            android:textColor="@color/color_000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:text="@{baseViewModel.isPay?@string/has_pay:@string/no_pay}"
+            android:textColor="@{baseViewModel.isPay?@color/color_55CD5F:@color/color_FF1A1E}"
+            android:textSize="14sp" />
+
+
+
+        <RelativeLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/iv_bg"
+            android:layout_below="@+id/tv_name"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_86">
+
+
+
+
+            <ImageView
+                android:scaleType="centerCrop"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="@dimen/dp_86"
+                app:imageUrl="@{baseViewModel.idPhotoBean.url}"
+                />
+
+            <TextView
+                android:visibility="@{baseViewModel.isPay?View.GONE:View.VISIBLE}"
+                android:layout_width="@dimen/dp_64"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_transparent_icon"
+                android:gravity="center"
+                android:text="支付后不显示此文字"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="@dimen/sp_6" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_guige"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_bg"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/iv_bg"
+            android:text="规格参数："
+            android:textColor="@color/color_888888"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_guige"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/iv_bg"
+            android:text="图片大小："
+            android:textColor="@color/color_888888"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_kb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_guige"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/tv_1"
+            android:text="@{TimeUtil.nullString(baseViewModel.idPhotoBean.size)}"
+            android:textColor="@color/color_888888"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_guige"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/tv_guige"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_x_px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@{baseViewModel.idPhotoBean.pxSize}"
+                android:textColor="@color/color_888888"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_guige"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/ll_px"
+            android:text="@{baseViewModel.idPhotoBean.mmSize}"
+            android:textColor="@color/color_888888"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_bg"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总价: ￥"
+                android:textColor="@color/color_000000"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:text="@{baseViewModel.idPhotoBean.money}"
+                android:textColor="@color/color_000000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/pay_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ll_money"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                binding:onClickCommand="@{baseViewModel.canelOrderClick}"
+                android:id="@+id/canel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_order_tv_cancel_bg"
+                android:paddingBottom="@dimen/dp_8"
+                android:paddingLeft="@dimen/dp_22"
+                android:paddingRight="@dimen/dp_22"
+                android:paddingTop="@dimen/dp_8"
+                android:text="@{baseViewModel.isPay?@string/delete_order:@string/canel_order}"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:visibility="@{baseViewModel.isPay?View.GONE:View.VISIBLE}"
+                binding:onClickCommand="@{baseViewModel.payClick}"
+                android:id="@+id/pay_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_order_tv_pay_bg"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_8"
+                android:paddingLeft="@dimen/dp_29"
+                android:paddingRight="@dimen/dp_29"
+                android:paddingTop="@dimen/dp_8"
+                android:text="去支付"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

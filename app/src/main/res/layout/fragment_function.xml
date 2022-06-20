@@ -1,0 +1,386 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_F5F5F5">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_F5F5F5"
+            android:orientation="vertical"
+            app:elevation="0dp">
+
+            <RelativeLayout
+                android:id="@+id/rll_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_F5F5F5"
+                app:layout_scrollFlags="scroll">
+
+                <ImageView
+                    android:layout_width="156dp"
+                    android:layout_height="159dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/bg_icon" />
+
+                <TextView
+                    android:id="@+id/tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/hello_morning"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_1"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="11dp"
+                    android:text="@string/function_string1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="17dp"-->
+            <!--android:layout_marginRight="17dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_scrollFlags="scroll">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_cunzhao"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="66dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/selector_function_tv_bg"-->
+            <!--android:drawableLeft="@drawable/cunzhao_icon"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="17dp"-->
+            <!--android:text="@string/function_string2"-->
+            <!--android:textColor="@color/color_000000"-->
+            <!--android:textSize="16sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_zhengzhao"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="66dp"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/selector_function_tv_bg"-->
+            <!--android:drawableLeft="@drawable/zhengzhao_icon"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="17dp"-->
+            <!--android:text="@string/function_string3"-->
+            <!--android:textColor="@color/color_000000"-->
+            <!--android:textSize="16sp" />-->
+            <!--</LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+                android:orientation="horizontal"
+                app:layout_scrollFlags="scroll">
+
+                <TextView
+                    android:id="@+id/tv_cunzhao"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_function_tv_bg"
+                    android:drawableLeft="@drawable/cunzhao_icon_old"
+                    android:gravity="center"
+                    android:padding="17dp"
+                    android:text="@string/function_string2"
+                    android:textColor="@color/color_000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_zhengzhao"
+                    android:layout_width="0dp"
+                    android:layout_height="66dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_function_tv_bg"
+                    android:drawableLeft="@drawable/zhengzhao_icon_old"
+                    android:gravity="center"
+                    android:padding="17dp"
+                    android:text="@string/function_string3"
+                    android:textColor="@color/color_000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<LinearLayout-->
+                <!--android:id="@+id/ll_classify"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="17dp"-->
+                <!--android:layout_marginRight="17dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:background="@drawable/shape_function_tv_bg"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingTop="15dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_xueli"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/xueli_icon"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/function_string_xueli"-->
+                <!--android:textColor="@color/color_808080"-->
+                <!--android:textSize="12sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_lvyou"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/lvyou_icon"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/function_string_lvyou"-->
+                <!--android:textColor="@color/color_808080"-->
+                <!--android:textSize="12sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_jianzhu"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/jianzhu_icon"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/function_string_jianzhu"-->
+                <!--android:textColor="@color/color_808080"-->
+                <!--android:textSize="12sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_yiyao"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/yiyao_icon"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/function_string_yiyao"-->
+                <!--android:textColor="@color/color_808080"-->
+                <!--android:textSize="12sp" />-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingBottom="15dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_yuyan"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/yuyan_icon"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/function_string_yuyan"-->
+                <!--android:textColor="@color/color_808080"-->
+                <!--android:textSize="12sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_shenfen"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/shengfen_icon"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/function_string_shenfen"-->
+                <!--android:textColor="@color/color_808080"-->
+                <!--android:textSize="12sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_it"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/it_icon"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/function_string_it"-->
+                <!--android:textColor="@color/color_808080"-->
+                <!--android:textSize="12sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_all"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:drawableTop="@drawable/changjing_icon"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/function_string_all"-->
+                <!--android:textColor="@color/color_808080"-->
+                <!--android:textSize="12sp" />-->
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/ll_classify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_function_tv_bg"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp">
+
+                        <TextView
+                            android:id="@+id/tv_xueli"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/xueli_icon_old"
+                            android:gravity="center"
+                            android:text="@string/function_string_xueli"
+                            android:textColor="@color/color_808080"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_lvyou"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/lvyou_icon_old"
+                            android:gravity="center"
+                            android:text="@string/function_string_lvyou"
+                            android:textColor="@color/color_808080"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_jianzhu"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/jianzhu_icon_old"
+                            android:gravity="center"
+                            android:text="@string/function_string_jianzhu"
+                            android:textColor="@color/color_808080"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_yiyao"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/yiyao_icon_old"
+                            android:gravity="center"
+                            android:text="@string/function_string_yiyao"
+                            android:textColor="@color/color_808080"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/tv_yuyan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/yuyan_icon_old"
+                            android:gravity="center"
+                            android:text="@string/function_string_yuyan"
+                            android:textColor="@color/color_808080"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_shenfen"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/shengfen_icon_old"
+                            android:gravity="center"
+                            android:text="@string/function_string_shenfen"
+                            android:textColor="@color/color_808080"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_it"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/it_icon_old"
+                            android:gravity="center"
+                            android:text="@string/function_string_it"
+                            android:textColor="@color/color_808080"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_all"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/changjing_icon_old"
+                            android:gravity="center"
+                            android:text="@string/function_string_all"
+                            android:textColor="@color/color_808080"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_classify"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="24dp"
+                    android:drawableLeft="@drawable/remen_icon"
+                    android:drawablePadding="6dp"
+                    android:text="@string/function_string4"
+                    android:textColor="@color/color_000000"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rll_top"
+            android:layout_marginBottom="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

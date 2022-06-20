@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">AdCommon</string>
+    <string name="no_data">暂无数据</string>
+    <string name="loading_dialog">加载中...</string>
+    <string name="error_net">网络错误,请稍后重试</string>
+    <string name="make_loading">正在制作中...</string>
+    <string name="is_loading">加载中...</string>
+
+
+
+    <string name="privacy_exit">退出</string>
+    <string name="privacy_agree">同意</string>
+    <string name="users_note">温馨提示</string>
+    <string name="privacy_tips_key1">《用户协议》</string>
+    <string name="privacy_tips_key2">《隐私政策》</string>
+    <string name="privacy_tips">欢迎使用"变声器语音包软件"！"变声器语音包软件"非常重视您的隐私和个人信息保护。在您使用"变声器语音包软件"前请认真阅读《用户协议》及《隐私政策》,您同意并接受全部条款后方可开始使用"变声器"</string>
+
+
+    <string name="confirmed">The user note has been confirmed</string>
+    <string name="opt_terms">Terms of Use</string>
+    <string name="opt_privacy">Privacy Policy</string>
+
+
+
+    <string name="sugesstion_feedback">意见反馈</string>
+    <string name="sugesstion">请详细描述您遇到的问题或建议,有助于我们快速定位问题,并解决</string>
+    <string name="input_hint">请在此输入您的意见,这将是我们做好产品的指明灯</string>
+    <string name="phoone_hint">联系方式:手机号/邮箱/QQ号码</string>
+    <string name="submit">提交</string>
+    <string name="answer_us">联系我们</string>
+    <string name="qq_answer">QQ联系</string>
+    <string name="send_eamil">发邮箱</string>
+    <string name="loading">提交中...</string>
+    <string name="thanks_feedback">感谢您的反馈</string>
+    <string name="content_not_null">内容不能为空哦</string>
+    <string name="wenquan">问卷调查</string>
+
+    <string name="please">请先安装</string>
+    <string name="send_code">发送验证码</string>
+    <string name="no_shouquan">操作未授权</string>
+    <string name="request_not">请求被拒绝</string>
+    <string name="raw_not">资源不存在</string>
+    <string name="ser_out_time">服务器执行超时</string>
+    <string name="ser_error">服务器内部错误</string>
+    <string name="ser_not_can_user">服务器不可用</string>
+    <string name="login_error">登录失败</string>
+    <string name="net_error">网络错误</string>
+    <string name="json_pase">解析错误</string>
+    <string name="connet_error">连接失败</string>
+    <string name="boor_error">证书验证失败</string>
+    <string name="connet_out_time">连接超时</string>
+    <string name="zhuji_error">主机地址未知</string>
+    <string name="weizhi_error">未知错误</string>
+</resources>

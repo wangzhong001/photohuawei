@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="baseViewModel"
+            type="com.xinqidian.adcommon.ui.activity.FeedBackViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <FrameLayout
+                android:id="@+id/layout_top_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                binding:onClickCommand="@{baseViewModel.backClick}"
+
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?android:attr/actionBarItemBackground"
+                    android:padding="@dimen/dp_12"
+                    android:src="@drawable/icon_back_left" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="意见反馈"
+                android:textColor="#ff333333"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.67dp"
+            android:layout_marginTop="25dp"
+            android:text="问题描述"
+            android:textColor="#ff808080"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_input_describe"
+            android:layout_width="match_parent"
+            android:layout_height="125.67dp"
+            android:layout_marginLeft="15.67dp"
+            android:layout_marginRight="15.67dp"
+            android:layout_marginTop="11.67dp"
+            android:background="@drawable/shape_bg_input_feedback"
+            android:gravity="top"
+            android:hint="请输入问题描述(请尽量提供您的手机型号，以方便我们排查问题)"
+            android:maxLines="20"
+            android:paddingBottom="13.67dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="13.67dp"
+            android:text="@={baseViewModel.inputContent}"
+            android:textColor="#000"
+            android:textColorHint="#BCBEC2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.67dp"
+            android:layout_marginTop="25dp"
+            android:text="手机号/qq/邮箱"
+            android:textColor="#ff808080"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.67dp"
+            android:layout_marginRight="15.67dp"
+            android:layout_marginTop="11.67dp"
+            android:background="@drawable/shape_bg_input_feedback"
+            android:ellipsize="end"
+            android:hint="请留下联系方式以方便我们和您联系"
+            android:maxLength="30"
+            android:paddingBottom="13.67dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingTop="13.67dp"
+            android:singleLine="true"
+            android:text="@={baseViewModel.phoneEmailContent}"
+            android:textColor="#000"
+            android:textColorHint="#BCBEC2"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.67dp"
+            android:layout_marginRight="15.67dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/sel_login"
+            android:letterSpacing="0.1"
+            android:padding="10dp"
+            android:text="提交"
+            android:textColor="@drawable/sel_login_color"
+            android:textSize="16sp"
+            binding:onClickCommand="@{baseViewModel.sumbitClick}" />
+
+    </LinearLayout>
+</layout>

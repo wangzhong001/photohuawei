@@ -1,0 +1,212 @@
+<resources>
+    <string name="app_name">最美一寸证件照制作</string>
+
+    <string name="share">分享图片</string>
+    <string name="login">注册/登录</string>
+    <string name="enter_password">请输入密码</string>
+    <string name="enter_phonenum">请输入手机号</string>
+    <string name="login_string1">多种类型证件任你挑选~</string>
+    <string name="login_string2">欢迎考试证件照</string>
+    <string name="save_password">请输入6~12位密码</string>
+    <string name="invitecode_password">请输入邀请码(可不填)</string>
+    <string name="function">首页</string>
+    <string name="photo">相册</string>
+    <string name="vip">会员</string>
+    <string name="my">我的</string>
+    <string name="number_of_available">可用次数</string>
+    <string name="add_number_of_available">增加可用次数</string>
+    <string name="log_out">退出登录</string>
+    <string name="log_success">登录成功</string>
+    <string name="pay_success">支付成功</string>
+    <string name="pay_string1">未检测到支付宝,请先安装再支付</string>
+    <string name="huangjin_vip">黄金会员</string>
+    <string name="baijin_vip">白金会员</string>
+    <string name="zuanshi_vip">钻石会员</string>
+    <string name="file_no_exist">文件不存在</string>
+    <string name="file_no_support">不支持此格式文件</string>
+    <string name="specification_details">规格详情</string>
+    <string name="normal_cunzhao">常用寸照</string>
+    <string name="normal_zhengzhao">常用证照</string>
+    <string name="hello_1">HI 凌晨好</string>
+    <string name="hello_2">HI 上午好</string>
+    <string name="hello_3">HI 中午好</string>
+    <string name="hello_4">HI 下午好</string>
+    <string name="hello_5">HI 晚上好</string>
+    <string name="loading">加载中...</string>
+    <string name="not_open_member">尚未开通会员</string>
+    <string name="gold_member">尊敬的黄金会员</string>
+    <string name="platinum_member">尊敬的白金会员</string>
+    <string name="diamond_member">尊敬的钻石会员</string>
+    <string name="click_register_to_log_in">点击注册登录</string>
+    <string name="order_details">订单详情</string>
+    <string name="dai_pay">待付款</string>
+    <string name="have_pay">付款成功</string>
+    <string name="shoot_tips">拍摄攻略</string>
+    <string name="update">编辑</string>
+    <string name="make_photo">开始制作</string>
+    <string name="yuantu">原图</string>
+    <string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
+
+    <!-- vipstring -->
+    <string name="vip_title">VIP特享功能</string>
+    <string name="click_login">点击登录</string>
+    <string name="unlock_more_featrues">解锁更多功能</string>
+    <string name="vip_string1">订阅套餐</string>
+    <string name="one_year">一年</string>
+    <string name="three_month">三个月</string>
+    <string name="one_month">一个月</string>
+    <string name="every_day_five">每天只要三毛钱</string>
+    <string name="every_day_seven">每天只要四毛钱</string>
+    <string name="every_day_nine">每天只要五毛钱</string>
+    <string name="money_35">￥39.99</string>
+    <string name="money_199">￥199.99</string>
+    <string name="money_8">￥19.99</string>
+    <string name="money_49">￥49.99</string>
+    <string name="money_2">￥9.99</string>
+    <string name="money_19">￥19.99</string>
+    <string name="subscribe_now">立即订阅</string>
+    <string name="vip_privilege">VIP特权</string>
+    <string name="vip_string2">无限使用次数</string>
+    <string name="vip_string3">随时随地,想用就用</string>
+    <string name="vip_string4">解锁更多语音包</string>
+    <string name="vip_string5">各种语音包尽情享用</string>
+    <string name="vip_string6">解锁更多压缩格式</string>
+    <string name="vip_string7">满足你的一切需求</string>
+    <string name="vip_string8">移除广告</string>
+    <string name="vip_member">VIP会员</string>
+    <string name="share_pic">分享</string>
+
+    <!--首页string -->
+    <string name="hello_morning">HI 早上好</string>
+    <string name="function_string1">您想如何开始制作证件照?</string>
+    <string name="function_string2">常用寸照</string>
+    <string name="function_string3">职业资格</string>
+    <string name="function_string4">热门类型</string>
+    <string name="function_string_xueli">学历考试</string>
+    <string name="function_string_lvyou">旅游签证</string>
+    <string name="function_string_jianzhu">建筑工程</string>
+    <string name="function_string_yiyao">医药卫生</string>
+    <string name="function_string_yuyan">语言考试</string>
+    <string name="function_string_shenfen">身份证件</string>
+    <string name="function_string_it">IT认证</string>
+    <string name="function_string_all">自定义规格</string>
+    <string name="quanbu_changjinn">全部场景</string>
+    <string name="id_class">证件分类</string>
+    <string name="copy">复制</string>
+    <string name="xiangsu_size">像素大小</string>
+    <string name="wenjian_size">文件大小</string>
+    <string name="fenbianlv">分辨率</string>
+    <string name="kuang">宽</string>
+    <string name="gao">高</string>
+    <string name="zuixiao">最小</string>
+    <string name="zuida">最大</string>
+
+
+
+
+    <!-- 设置string -->
+    <string name="current_version">当前版本</string>
+    <string name="share_application">分享应用</string>
+    <string name="system_privacy">系统隐私权限</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="feedback">意见反馈</string>
+    <string name="faq">常见问题</string>
+    <string name="online_contact">在线评论</string>
+    <string name="setting">设置</string>
+    <string name="serce_string">在线客服</string>
+    <string name="versio_up">版本更新</string>
+    <string name="kefu_center">客服中心</string>
+    <string name="kefu_detail">问题详情</string>
+
+
+    <!-- 规格详情string -->
+    <string name="detail_string1">支持保存电子照</string>
+    <string name="detail_string2">支持冲印</string>
+    <string name="detail_string3">冲印尺寸</string>
+    <string name="detail_string4">像素大小</string>
+    <string name="detail_string5">分辨率</string>
+    <string name="detail_string6">背景色</string>
+    <string name="detail_string7">文件大小</string>
+    <string name="detail_string8">无要求</string>
+    <string name="detail_string9">拍摄要求</string>
+    <string name="take_photo">直接拍摄</string>
+    <string name="select_albums">相册选取</string>
+    <string name="has_pay">已付款</string>
+    <string name="no_pay">未付款</string>
+    <string name="dianzizhao">电子照</string>
+    <string name="canel_order">取消订单</string>
+    <string name="delete_order">删除订单</string>
+    <string name="meiibai">美白</string>
+    <string name="mopi">磨皮</string>
+    <string name="shoulian">瘦脸</string>
+
+
+
+
+    <string-array name="vip_title">
+        <item>每天给自己一个希望，试着不为明天而烦恼，不为昨天而叹息，只为今天更美好</item>
+        <item>和有趣的人在一起，即旅途漫漫、前路未知，也能一起将平凡的日常过成一首诗</item>
+        <item>人活在世上，无非是面对两大世界，身外的大千世界和自己的内心世界</item>
+        <item>最容易被忽略的人，往往是对我们最好的人。一旦他们离开，就再也不会回来</item>
+        <item>出发，永远是最有意义的事，去做就是了</item>
+        <item>幸福，就是找一个温暖的人过一辈子</item>
+        <item>微笑，是最美的阳光</item>
+        <item>与其在意别人的背弃和不善，不如经营自己的尊严和美好</item>
+        <item>你生活的起点并不是那么重要，重要的是最后你能到达哪里</item>
+        <item>不论今天多么的困难，都要坚信：只有回不去的过往，没有到不了的明天</item>
+        <item>如果你想要什么，那就勇敢地去追求，不要管别人是怎么想的，因为这就是实现梦想的方式</item>
+        <item>人的生命不在于长短，在于是否痛快活过</item>
+        <item>年少时总觉得要离家远远的才好，现在开始觉得离得越远心中越是牵挂</item>
+        <item>别人怎么看你，和你毫无关系。你要怎么活，也和别人毫无关系</item>
+        <item>心若计较，处处都是怨言；心若放宽，时时都是晴天</item>
+        <item>此去山长水远，愿君且行且珍重</item>
+        <item>你对时间的态度，就是你对仅有一次生命的态度</item>
+        <item>活在这个世上，被人需要，是最极致的幸福</item>
+        <item>生活从来不会刻意亏欠谁，它给了你一块阴影，必会在不远的地方撒下阳光</item>
+        <item>请一定要有自信。你就是一道风景，没必要在别人的风景里面仰视</item>
+        <item>生活可以漂泊，可以孤独，但灵魂必须有所归依</item>
+        <item>生活不是一场赛跑，而是一次旅行，要懂得好好欣赏沿途的风景</item>
+        <item>不管前方的路有多苦，只要走的方向正确，不管多么崎岖不平，都比站在原地更接近幸福</item>
+        <item>人生就像一杯茶，不会苦一辈子，但总会苦一阵子</item>
+        <item>你坚持下来了，而别人坚持不下来，这就是你的资本</item>
+        <item>茶不过两种姿态，浮、沉；饮茶人不过两种姿势，拿起、放下。人生如茶，沉时坦然，浮时淡然，拿得起也需要放得下</item>
+        <item>能救你脱出苦海的只有你自己。让自己变得更好，才是唯一的出路</item>
+        <item>每个人都有梦想。但不同的是：有的人只梦，有的人敢想</item>
+        <item>情商最低的一种人，就是明明可以好好说的话，非要用最令人讨厌的方式表达</item>
+        <item>很多时候，努力并不是为了得到奖赏，而是为了被认同</item>
+        <item>幸福不是满足了你多少小欲望，而是，你有了新的目标让你看到了希望</item>
+        <item>一切发生在你身上的都不是碰巧。你获得什么，就在于你付出了什么</item>
+        <item>我们通常忽略那些疼爱我们的人，而我们疼爱那些忽略我们的人</item>
+        <item>幸福不是满足了你多少小欲望，而是，你有了新的目标让你看到了希望</item>
+        <item>从没有白费的努力，也没有碰巧的成功。只要认真对待生活，终有一天，你的每一份努力，都将绚烂成花</item>
+
+
+    </string-array>
+
+
+    <string-array name="kefu_title">
+        <item>订单已付款,未找到电子照</item>
+        <item>电子照保存后为什么模糊？</item>
+        <item>已付款订单证件照需要修改底色,文件大小,尺寸像素等,怎么办?</item>
+        <item>为什么考试报名的证件照无法上传成功？</item>
+        <item>照片有色差要求退款</item>
+        <item>已付款的订单找不到/找不到以前的订单怎么办</item>
+        <item>证件照自行打印用什么尺寸？</item>
+
+    </string-array>
+
+
+    <string-array name="kefu_content">
+        <item>请到个人中心查看是否有相应订单,如果有就请重新保存\r\n若再次保存还是未找到相关照片,请联系客服</item>
+        <item>第一种情况:您上传或者拍摄的原图模糊\r\n我们制作证件照是在您原图清晰度的基础上制作,如\r\n原图模糊,效果就会模糊,您要是不满意效果,可重新上传或拍摄清晰的额图片下单付款,并及时联系客服,可协助您处理。\r\n第二种情况:您的原图清晰,但保存后手机查看模糊自动保存到手机相册会改变图片的大小并且手机会自适配全屏预览,放大了图片,就会导致模糊感,建议您发送到电脑,100%放大查看效果,如有任何疑问,请联系客服处理.</item>
+        <item>1.改文件大小和格式jpg:请您联系客服,我们可以人工免费为您修改。\r\n 2.改尺寸、像素和底色:尺寸、像素和底色是在您下单付款前您本人确认选择的,并且由于电子证件照商品的特殊性,无法为您退款或免费修改,建议您选择正确的尺寸、像素和底色重新下单制作哦。</item>
+        <item>1.您好,请您仔细查看照片上传要求,确保您的照片规格选择正确\r\n 2.如果正确,请确认您的报名方式是否有误,报名尽量用电脑IE浏览器报名,如果有审核工具下载要求的,请一定下载后,将照片放入审核工具压缩后上传报名。\r\n 3.如果规格选择不正确请搜索正确的照片规格重新制作报名。\r\n注:如因证件照大小、格式等问题无法上传,可联系客服人工协助您处理。</item>
+        <item>您好,证件照是定制化商品,凡是色差问题概不退款,希望您能理解</item>
+        <item>您好,为了保护您的额隐私,本APP不提供照片存储功能,订单自付款成功之日起7天后自动删除,请您尽早提取。如需找回您7天内的订单照片,可联系客服为您查找。</item>
+        <item>自行打印请用6寸相纸打印排版照</item>
+
+    </string-array>
+
+
+</resources>

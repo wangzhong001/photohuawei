@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/loading_shape"
+        android:orientation="vertical">
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<ImageView-->
+                <!--android:padding="@dimen/dp_5"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/shanchu_icon_gray"/>-->
+        <!--</RelativeLayout>-->
+
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dp_19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/color_000000"
+            android:text="操作失败"/>
+
+        <TextView
+            android:text="未检测到人脸"
+            android:id="@+id/time_tv"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_333333"
+            />
+
+        <View
+            android:layout_marginTop="@dimen/dp_19"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.5"
+            android:background="@color/color_EEEEEE"/>
+
+        <TextView
+            android:id="@+id/sure_tv"
+            android:paddingBottom="@dimen/dp_15"
+            android:paddingTop="@dimen/dp_15"
+            android:textSize="@dimen/sp_16"
+            android:text="确定"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_000000"/>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="baseViewModel"
+            type="com.qihe.zzj.view.MakePhotoViewModel"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentInsetStart="0dp">
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="8dp"
+                android:layout_marginRight="16dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/go_icon_white"
+                android:background="@drawable/shape_edite_photo_tv_next_bg"
+                android:text="下一步"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/specification_details"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/sixth"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:background="?android:attr/actionBarItemBackground"
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:padding="15dp"
+                android:src="@drawable/back_icon" />
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:padding="38dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/view_white"
+                    android:layout_centerInParent="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/shape_white_bg" />
+                <View
+                    android:id="@+id/red_view"
+                    android:layout_toLeftOf="@+id/view_white"
+                    android:layout_marginRight="58dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@color/color_EA3323" />
+
+
+                <View
+                    android:id="@+id/blue_view"
+                    android:layout_toRightOf="@+id/view_white"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="58dp"
+                    android:background="@color/color_568CD5" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:background="@drawable/bg_icon_bianji"
+            android:layout_below="@+id/tool_bar"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true">
+                <LinearLayout
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:gravity="center_vertical"
+                    android:layout_width="@dimen/dp_250"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="@dimen/dp_6"
+                        android:background="@color/color_000000"/>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_weight="1"
+                        android:background="@color/color_000000"/>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_000000"
+                        android:textSize="@dimen/sp_14"
+                        android:text="@{baseViewModel.withString}"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_weight="1"
+                        android:background="@color/color_000000"/>
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="@dimen/dp_6"
+                        android:background="@color/color_000000"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="@dimen/dp_250"
+                        android:layout_height="@dimen/dp_340">
+
+                        <ImageView
+                            android:id="@+id/pic_iv"
+                            android:scaleType="centerCrop"
+                            android:layout_width="@dimen/dp_250"
+                            android:layout_height="@dimen/dp_340" />
+
+                        <TextView
+                            android:layout_margin="@dimen/dp_10"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_20"
+                            android:gravity="center"
+                            android:text="保存后不显示此文字"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_80000000"/>
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_340">
+
+
+                        <View
+                            android:layout_width="@dimen/dp_6"
+                            android:layout_height="@dimen/dp_2"
+                            android:background="@color/color_000000"/>
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/color_000000"/>
+
+                        <com.qihe.zzj.view.VerticalTextView
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:id="@+id/vet_textview"
+                            android:textSize="@dimen/sp_14"
+                            android:textColor="@color/color_000000"
+                            android:text="@{baseViewModel.heightString}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/color_000000"/>
+                        <View
+                            android:layout_width="@dimen/dp_6"
+                            android:layout_height="@dimen/dp_2"
+                            android:background="@color/color_000000"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

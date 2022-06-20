@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="baseViewModel"
+            type="com.xinqidian.adcommon.base.TitleViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<FrameLayout-->
+            <!--android:visibility="@{baseViewModel.tabar}"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/white"-->
+            <!--android:paddingBottom="@dimen/dp_14"-->
+            <!--android:paddingTop="@dimen/dp_30">-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/title_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@{baseViewModel.titleName}"-->
+            <!--android:textColor="@color/color_333333"-->
+            <!--android:textSize="@dimen/sp_18" />-->
+
+
+            <!--</FrameLayout>-->
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/content_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <ViewStub
+            android:id="@+id/empty_viewstub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/empty_view" />
+
+        <ViewStub
+            android:id="@+id/net_error_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/net_error_view" />
+    </RelativeLayout>
+</layout>
